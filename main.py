@@ -253,7 +253,7 @@ print (max(list1))
 aList[1:4] = [20, 24, 28]
 #: This line assigns a new list [20, 24, 28] to a slice of the 
 #original list aList from index 1 to 4, #  not including the element at index 4.
-"""
+
 #FOR LOOPS  SIMPLE
 aList = [1, 2, 3, 4, 5, 6, 7]
 for a in aList:
@@ -270,5 +270,26 @@ for fruits_types in tuple_dict:
       Name_1=fruits_types['Name']
       Tastes_1=fruits_types['Taste']
       Colors_1=fruits_types['Color']
-      print(f"{Name_1} is going to be {Tastes_1} and color is showing {Colors_1}")
+      print(f"{Name_1} is going to be {Tastes_1} and color is showing {Colors_1} ends")
 
+#FOR LOOPS LIST ITEMS FROM KEYS WITH 
+print("second way to create dictnry using dict() ")
+dict_func= dict(Name="apple", Taste="Sour", Color="Red")
+print(f"{dict_func['Name']} is going to be {dict_func['Taste']} and color is showing {dict_func['Color']}")
+"""
+#FOR LOOPS LIST ITEMS FROM KEYS WITH DICTNARY OBJECT
+print("FOR LOOPS LIST ITEMS FROM KEYS WITH DICTNARY OBJECT")
+dict_object = [{'Name': 'apple', 'Taste': 'Sour', 'Color': 'Red', 'Price': 100},
+              {'Name': 'banana', 'Taste': 'Sweet', 'Color':'Yellow','Price':100},
+              {'Name': 'orange', 'Taste': 'Sour', 'Color': 'Orange', 'Price': 100},
+              {'Name': 'grape', 'Taste': 'Tartar', 'Color': 'Purple', 'Price':100},
+              {'Name': 'Pom', 'Taste': 'Tartar', 'Color': 'Megenta', 'Price': 100},
+              {'Name': 'Dragon', 'Taste': 'Sweet', 'Color': 'Megenta','Price': 100}
+              ]
+
+for fruit_types in dict_object:
+      Name=fruit_types['Name']
+      Taste=fruit_types['Taste']
+      Color=fruit_types['Color']
+      Price = fruit_types['Price']
+      print(f" DICTNARY OBJECT OF {Name} is going to be {Taste} and color is showing {Color} with a Value of ${Price} ends")
