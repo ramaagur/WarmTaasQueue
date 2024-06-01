@@ -260,13 +260,15 @@ for a in aList:
       print("print list in aList  ", a)
 for b in range(1, 10):
       print("print list in  range of list  ", b)
-#FOR LOOPS LIST ITEMS FROM KEYS
-dictnry = ({'Name': 'apple', 'Taste': 'Sour', 'Color': 'Red'}, 
+#FOR LOOPS LIST ITEMS FROM KEYS WITH tuple_dict
+print("FOR LOOPS LIST ITEMS FROM KEYS WITH tuple_dict")
+tuple_dict = ({'Name': 'apple', 'Taste': 'Sour', 'Color': 'Red'}, 
            {'Name': 'banana', 'Taste': 'Sweet', 'Color': 'Yellow'},
            {'Name': 'orange', 'Taste': 'Sour', 'Color': 'Orange'},
            {'Name': 'grape', 'Taste': 'Tartar', 'Color': 'Purple'})
-for fruits_types in dictnry:
+for fruits_types in tuple_dict:
       Name_1=fruits_types['Name']
       Tastes_1=fruits_types['Taste']
       Colors_1=fruits_types['Color']
       print(f"{Name_1} is going to be {Tastes_1} and color is showing {Colors_1}")
+
