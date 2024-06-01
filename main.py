@@ -254,3 +254,19 @@ aList[1:4] = [20, 24, 28]
 #: This line assigns a new list [20, 24, 28] to a slice of the 
 #original list aList from index 1 to 4, #  not including the element at index 4.
 """
+#FOR LOOPS  SIMPLE
+aList = [1, 2, 3, 4, 5, 6, 7]
+for a in aList:
+      print("print list in aList  ", a)
+for b in range(1, 10):
+      print("print list in  range of list  ", b)
+#FOR LOOPS LIST ITEMS FROM KEYS
+dictnry = ({'Name': 'apple', 'Taste': 'Sour', 'Color': 'Red'}, 
+           {'Name': 'banana', 'Taste': 'Sweet', 'Color': 'Yellow'},
+           {'Name': 'orange', 'Taste': 'Sour', 'Color': 'Orange'},
+           {'Name': 'grape', 'Taste': 'Tartar', 'Color': 'Purple'})
+for fruits_types in dictnry:
+      Name_1=fruits_types['Name']
+      Tastes_1=fruits_types['Taste']
+      Colors_1=fruits_types['Color']
+      print(f"{Name_1} is going to be {Tastes_1} and color is showing {Colors_1}")
