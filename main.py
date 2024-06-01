@@ -276,7 +276,7 @@ for fruits_types in tuple_dict:
 print("second way to create dictnry using dict() ")
 dict_func= dict(Name="apple", Taste="Sour", Color="Red")
 print(f"{dict_func['Name']} is going to be {dict_func['Taste']} and color is showing {dict_func['Color']}")
-"""
+
 #FOR LOOPS LIST ITEMS FROM KEYS WITH DICTNARY OBJECT
 print("FOR LOOPS LIST ITEMS FROM KEYS WITH DICTNARY OBJECT")
 dict_object = [{'Name': 'apple', 'Taste': 'Sour', 'Color': 'Red', 'Price': 100},
@@ -293,3 +293,33 @@ for fruit_types in dict_object:
       Color=fruit_types['Color']
       Price = fruit_types['Price']
       print(f" DICTNARY OBJECT OF {Name} is going to be {Taste} and color is showing {Color} with a Value of ${Price} ends")
+      """
+#DESTRUTURING SYNTAX IN PYTHON USING TUPLES
+print("DESTRUTURING SYNTAX IN PYTHON USING TUPLES")
+#tuple_1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+tuple_destructure_1=[('Name','Ram') , ('Age',13) , ('Race','Indian'),('Contry','Asia') , ('Eye','black') , ('Weight',90),('Name','Sam') , ('Age',12) , ('Race','dian'),('Contry','sia') , ('Eye','blu') , ('Weight',30)]
+
+# Iterate through each tuple in the list
+for i in range(0, len(tuple_destructure_1), 6):
+    # Unpack each tuple, assuming each tuple has exactly six elements
+    Name, Age, Race, Contry, Eye, Weight = tuple_destructure_1[i:i+6]
+    print(f"Name is {Name[1]} and Age is {Age[1]} and Race is {Race[1]} and Contry is {Contry[1]} and Eye color is {Eye[1]} and body Weight is {Weight[1]} ends")
+#DESTRUTURING SYNTAX IN PYTHON USING DICTINARY
+print("DESTRUTURING SYNTAX IN PYTHON USING DICTINARY")
+dict_person_age = {'Ram': 12, 'Andy': 13, 'Rank': 5, 'Rohan': 10, 'Ramu': 11}
+# Iterate through each key-value pair in the dictionary
+for key, value in dict_person_age.items():
+      print(f"Key is {key} and value is {value} ends")
+for person_name in dict_person_age:
+      print(f"person Name is {person_name} and value is {dict_person_age[person_name]} ends")
+
+for person_age in dict_person_age.values():
+      print(f"Age value is  : {person_age}")
+
+dict_person_age1 = {'Ramas': 12, 'Andya': 13, 'Ranks': 5, 'Rohans': 10, 'Ramus': 11}
+for j in range(0, len(dict_person_age1), 2):
+      keys = list(dict_person_age1.keys())
+      values = list(dict_person_age1.values())
+      print(f"Key is {keys[j]} and value is {values[j]} ends")      
+
+#We CAN RETRIEVE VALUE AND KEY FROM DICTIONARY USING ITEMS, AND RETRIEVE # VALUES ALONE FROM FROM DICTIONARY USING VALUES() WITH DESTRUCTURING
