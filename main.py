@@ -293,7 +293,7 @@ for fruit_types in dict_object:
       Color=fruit_types['Color']
       Price = fruit_types['Price']
       print(f" DICTNARY OBJECT OF {Name} is going to be {Taste} and color is showing {Color} with a Value of ${Price} ends")
-      """
+    
 #DESTRUTURING SYNTAX IN PYTHON USING TUPLES
 print("DESTRUTURING SYNTAX IN PYTHON USING TUPLES")
 #tuple_1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -323,3 +323,56 @@ for j in range(0, len(dict_person_age1), 2):
       print(f"Key is {keys[j]} and value is {values[j]} ends")      
 
 #We CAN RETRIEVE VALUE AND KEY FROM DICTIONARY USING ITEMS, AND RETRIEVE # VALUES ALONE FROM FROM DICTIONARY USING VALUES() WITH DESTRUCTURING
+
+#SET QUIZ
+sampleSet = {"Yellow", "Orange", "Black"}
+sampleSet.add("Blue")
+sampleSet.add("Orange")
+print(sampleSet)
+
+sampleSet1 = {"Yellow", "Orange", "Black"}
+sampleSet1.discard("Orange")
+print(sampleSet1)
+
+set1 = {"Yellow", "Orange", "Black"}
+set2 = {"Orange", "Blue", "Pink"}
+
+set1.difference_update(set2)
+print(set1)
+
+set2.difference_update(set1)
+print(set1)
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 10, 30, 40, 80, 20, 50}
+
+print(set1.issubset(set2))
+print(set2.issuperset(set1))
+
+sampleSet2 = {"Yellow", "Orange", "Black"}
+sampleSet2.update(["Blue", "Green", "Red"])
+print(sampleSet2)
+
+set11 = {"Yellow", "Orange", "Black"}
+set12 = {"Orange", "Blue", "Pink"}
+
+set13 = set12.difference(set11)
+print(set13)
+
+sampleSeta = {"Yellow", "Orange", "Black"}
+sampleSeta.discard("Blue")
+print(sampleSeta)
+
+set12 = {10, 20, 30, 40}
+set22 = {50, 20, "10", 60}
+
+set32 = set12.union(set22)
+print(set32)
+
+sampleSetb = {"Yellow", "Orange", "Black"}
+sampleSetc=sampleSetb.copy()
+print("new set c is : {sampleSetc} ")
+for a in sampleSetb:
+      name=a[0:7]
+      print("printing elements from set : ",name)
+"""
