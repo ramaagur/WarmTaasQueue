@@ -376,3 +376,4 @@ for a in sampleSetb:
       name=a[0:7]
       print("printing elements from set : ",name)
 """
+print("second way to create ")
