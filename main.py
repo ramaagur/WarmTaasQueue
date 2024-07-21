@@ -376,7 +376,7 @@ for a in sampleSetb:
       name=a[0:7]
       print("printing elements from set : ",name)
 """
-print("Two way to create Break and continue")
+print("Two way to create Break and continue  works fine")
 cars={"BMW","Audi","Faulty","Honda","Tesla"}
 for status in cars:
     if status=="Faulty":
