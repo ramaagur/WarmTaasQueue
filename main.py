@@ -443,7 +443,7 @@ def menu():
         if user_input == 'a':                                                   
               add_movie ()                                  
         elif user_input == 'l':
-            show_movie ()           
+            show_movies (movies)           
         elif user_input == 'f':
               find_movie ()                                 
         else:                                               
@@ -452,11 +452,35 @@ def menu():
 def add_movie():    
     name = input ( "Enter a movie name  :  " )             
     director = input ( "Enter a directr name  :  " )        
-    year = int ( input ( "Enter a movie name  :  " ) )
+    year = input ( "Enter a movie name  :  " ) 
     movies.append ({                                        
         'name':name,                                        
         'director':director,                                
         'year':year                                         
     })                                                      
-menu ()    
+   
 print(movies)
+#FUNCTIONS SHOW MOVIES IN MOVIE PROJECT
+def show_movies(movies_list):                           
+    for movie in movies_list:                    
+        show_movie_details(movie)           
+                                            
+def show_movie_details(movie): 
+    print(f"name: {movie['name']}")            
+    print(f"director: {movie['director']}")
+    print(f"year:{movie['year']}")
+
+def find_movie():
+    find_by = input("enter what movie category you are finding : ")
+    looking_for = input("What part of the are you looking for :  ")
+    found_movies = find_by_attribute(movies, looking_for, lambda x : x[find_by])
+    show_movies(found_movies)
+    return found_movies # Return the found_movies list
+def find_by_attribute(items, expected, finder):
+    found = []
+    for i in items:
+        if finder(i) == expected:
+            found.append(i)
+    return found
+
+menu()
