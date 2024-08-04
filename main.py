@@ -392,7 +392,7 @@ for status2 in cars:
 else:
       print("Status is not BMW")       
 
-
+#FUNCTIONS IN PYTHON
 print("Find a number is aprime number")
 for a in range(1,15):
       for b in range(2,a):
@@ -415,7 +415,7 @@ for a in range(1,12):
             print(f"this will be {a} is a prime number")
             """
 """                                                            
-Enter 'a' to add a movie, 'l' to see the movies, 'f' to find the movies and 'q' to quit the movies
+Enter 'a' to add a movie, 'l' to see the movies, 'f' to find the movies and 'q' to quit the moviesgit
 --Add Movies                                                   
 --show movies                                                  
 --find a movie                                                 
@@ -445,20 +445,18 @@ def menu():
         elif user_input == 'l':
             show_movie ()           
         elif user_input == 'f':
-              find_movie ()                                      
-        else:                                                  
-            print ( "unknown command" )                        
+              find_movie ()                                 
+        else:                                               
+            print ( "unknown command" )                     
         user_input = input ( "Enter 'a', 'l' , 'f' and 'q'  :  " )         
-
-def add_movie():                                                           
-    name = input ( "Enter a movie name  :  " )                             
-    director = input ( "Enter a directr name  :  " )                       
-    year = int ( input ( "Enter a movie name  :  " ) )                     
-
-    movies.append ({                                           
-        'name':name,                                           
-        'director':director,                                   
-        'year':year                                            
-    })                                                         
-menu ()                                                                    
+def add_movie():    
+    name = input ( "Enter a movie name  :  " )             
+    director = input ( "Enter a directr name  :  " )        
+    year = int ( input ( "Enter a movie name  :  " ) )
+    movies.append ({                                        
+        'name':name,                                        
+        'director':director,                                
+        'year':year                                         
+    })                                                      
+menu ()    
 print(movies)
