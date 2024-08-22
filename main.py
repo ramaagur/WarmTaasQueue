@@ -437,6 +437,7 @@ movies = []
      'year':         (int)  
      }                      
 """
+"""
 def menu():            
     user_input = input ( "Enter 'a', 'l' , 'f' and 'q'  :  " ) 
     while user_input != 'q':
@@ -484,3 +485,23 @@ def find_by_attribute(items, expected, finder):
     return found
 
 menu()
+"""
+""" def and create object in Python"""
+"""Step: 1 Def the object"""
+class Student():
+ def __init__(self, new_name, new_grades):
+     self.name = new_name
+     self.grades = new_grades
+ def student_average(self):
+               return sum(self.grades) / len(self.grades)
+"""Step: 2 Create the object"""
+student_one = Student('Rolf Smith', [70, 88, 90, 99])
+student_two = Student('Jose Smith', [50, 60, 99, 100])
+
+"""Step: 3 Print the object"""
+print(student_one.name)
+print(student_one.grades)
+print(student_one.student_average())
+print(student_two.name)
+print(student_two.grades)
+print(student_two.student_average())
