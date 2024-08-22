@@ -486,7 +486,7 @@ def find_by_attribute(items, expected, finder):
 
 menu()
 """
-""" def and create object in Python"""
+""" def and create student grades object in Python"""
 """Step: 1 Def the object"""
 class Student():
  def __init__(self, new_name, new_grades):
@@ -498,10 +498,55 @@ class Student():
 student_one = Student('Rolf Smith', [70, 88, 90, 99])
 student_two = Student('Jose Smith', [50, 60, 99, 100])
 
-"""Step: 3 Print the object"""
+"""Step: 3 Print the object
 print(student_one.name)
 print(student_one.grades)
 print(student_one.student_average())
 print(student_two.name)
 print(student_two.grades)
-print(student_two.student_average())
+print(student_two.student_average())"""
+
+
+""" def and create bank transaction object in Python"""
+"""Step: 1 Def the object"""
+class Bank:
+    def __init__(self, new_balance):
+        self.balance = new_balance  # Expecting a list of floats
+
+    def amount(self):
+        return float(sum(self.balance))  # Return the sum of the balance list
+
+    def deposit(self, amount):
+# Append the deposit amount to the balance list
+        self.balance.append(float(amount))  
+        return float(self.amount())  # Return the updated balance
+
+    def withdraw(self, amount):
+# Subtract the amount from the total balance
+        total = sum(self.balance)
+        if total >= float(amount):
+# Use a negative amount to represent withdrawal
+            self.balance.append(-float(amount))  
+            return float(self.amount())  # Return the updated balance
+        else:
+            raise ValueError("Insufficient funds")  # Handle insufficient funds
+
+# Create Bank object
+current_balance1 = Bank([100.00, 200.00, 3000.00])
+
+# Print the sum of balances for the Bank object
+print(f"Balance current: {current_balance1.amount()}")
+
+# Deposit an amount
+new_balance = current_balance1.deposit(500.00)
+print(f"Current new balance on acct after deposit is: {new_balance}")
+
+# Withdraw an amount
+try:
+    withdrawal_amount = current_balance1.withdraw(200.00)
+    print(f"After withdrawal, new balance on acct is: {withdrawal_amount}")
+except ValueError as e:
+    print(e)
+
+
+
