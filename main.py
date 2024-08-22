@@ -552,5 +552,96 @@ try:
 except ValueError as e:
     print(e)
 
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.is_borrowed = False
+
+    def borrow(self):
+        if not self.is_borrowed:
+            self.is_borrowed = True
+            return True
+        else:
+            return False
+
+    def return_book(self):
+        if self.is_borrowed:
+            self.is_borrowed = False
+            return True
+        else:
+            return False
+
+# Define the Library class
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def display_books(self):
+        print("Available books in the library:")
+        for book in self.books:
+            status = "Borrowed" if book.is_borrowed else "Available"
+            print(f"{book.title} by {book.author} - {status}")
+
+    def borrow_book(self, title):
+        for book in self.books:
+            if book.title == title and not book.is_borrowed:
+                if book.borrow():
+                    print(f"You have successfully borrowed '{title}'")
+                    return
+        print(f"Sorry, '{title}' is not available or already borrowed.")
+
+    def return_book(self, title):
+        for book in self.books:
+            if book.title == title and book.is_borrowed:
+                if book.return_book():
+                    print(f"You have successfully returned '{title}'")
+                    return
+        print(f"Sorry, '{title}' was not borrowed from this library.")
+
+# Define the main function to interact with the library
+def main():
+    library = Library()
+
+    # Add some books to the library
+    library.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald"))
+    library.add_book(Book("1984", "George Orwell"))
+    library.add_book(Book("To Kill a Mockingbird", "Harper Lee"))
+    library.add_book(Book("The Catcher in the Rye", "J.D. Salinger"))
+
+    while True:
+        print("\nLibrary Menu:")
+        print("1. Display available books")
+        print("2. Borrow a book")
+        print("3. Return a book")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            library.display_books()
+        elif choice == "2":
+            title = input("Enter the title of the book you want to borrow: ")
+            library.borrow_book(title)
+        elif choice == "3":
+            title = input("Enter the title of the book you want to return: ")
+            library.return_book(title)
+        elif choice == "4":
+            print("Thank you for using the library system!")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+
+# Run the main function
+if __name__ == "__main__":
+    main()
+
+
+
+
 
 
