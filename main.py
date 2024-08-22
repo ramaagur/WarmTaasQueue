@@ -511,25 +511,29 @@ print(student_two.student_average())"""
 """Step: 1 Def the object"""
 class Bank:
     def __init__(self, new_balance):
-        self.balance = new_balance  # Expecting a list of floats
-
+# Expecting a list of floats
+        self.balance = new_balance  
+# Return the sum of the balance list
     def amount(self):
-        return float(sum(self.balance))  # Return the sum of the balance list
+        return float(sum(self.balance))  
 
     def deposit(self, amount):
 # Append the deposit amount to the balance list
-        self.balance.append(float(amount))  
-        return float(self.amount())  # Return the updated balance
+        self.balance.append(float(amount))
+# Return the updated balance
+        return float(self.amount())  
 
     def withdraw(self, amount):
 # Subtract the amount from the total balance
         total = sum(self.balance)
         if total >= float(amount):
 # Use a negative amount to represent withdrawal
-            self.balance.append(-float(amount))  
-            return float(self.amount())  # Return the updated balance
+            self.balance.append(-float(amount)) 
+# Return the updated balance
+            return float(self.amount())
+ # Handle insufficient funds
         else:
-            raise ValueError("Insufficient funds")  # Handle insufficient funds
+            raise ValueError("Insufficient funds") 
 
 # Create Bank object
 current_balance1 = Bank([100.00, 200.00, 3000.00])
