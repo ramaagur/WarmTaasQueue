@@ -375,8 +375,13 @@ print("new set c is : {sampleSetc} ")
 for a in sampleSetb:
       name=a[0:7]
       print("printing elements from set : ",name)
+<<<<<<< HEAD
 """
 print("Two way to create Break and continue  works fine")
+=======
+
+print("Two way to create Break and continue")
+>>>>>>> 85b37e0 (code checkin Prime)
 cars={"BMW","Audi","Faulty","Honda","Tesla"}
 for status in cars:
     if status=="Faulty":
@@ -390,4 +395,31 @@ for status2 in cars:
    if status2=="Tesla":
         print("Status is Tesla")
 else:
+<<<<<<< HEAD
       print("Status is not BMW")        
+=======
+      print("Status is not BMW")       
+
+
+print("Find a number is aprime number")"""
+for a in range(1,15):
+      for b in range(2,a):
+            if a%b==0:
+                  print(f"this {a//b}")
+                  print(f"{a} is not a prime number")
+                  print(f"{a} equals {b} * {a//b}")
+                  break
+      else:
+            print(f"this will be {a} is a prime number")
+
+for a in range(1,12):
+      for c in range(2,a):
+            if a%c==0:
+                  print(f"this {a//c}")
+                  print(f"{a} is not a prime number")
+                  print(f"{a} equals {c} * {a//c}")
+                  break
+      else:
+            print(f"this will be {a} is a prime number")
+>>>>>>> 85b37e0 (code checkin Prime)
+#all
