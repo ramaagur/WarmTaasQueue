@@ -552,21 +552,3 @@ try:
     print(f"After withdrawal, new balance on acct is: {withdrawal_amount}")
  except ValueError as e:
     print(e)
-"""
-'''from typing import List'''
-
-def cr_acc(name: str, holder: str, all_members: List = None):
-    if all_members is None:
-        all_members = []
-    all_members.append(holder)
-
-    return {
-        'name': name,
-        'accHolder': holder,
-        'all_members_all': all_members
-    }
-
-# Example usage:
-mem_name1 = cr_acc('save', 'sumathi')
-print(id(mem_name1))
-
